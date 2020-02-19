@@ -48,3 +48,6 @@ def vote(request, question_id):
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
     return HttpResponse("Your're voting on question %s." % question_id)
+
+def owner(request):
+    return HttpResponse("Hello, world. 6f2268bd is the polls index.")
